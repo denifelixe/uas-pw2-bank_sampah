@@ -23,6 +23,6 @@ class Nasabah extends Model
 
     public function jenisSampah()
     {
-        return $this->belongsTo(BankSampah::class, 'jenis_sampah_id');
+        return $this->belongsTo(BankSampah::class, 'jenis_sampah_id')->withTrashed();
     }
 }
